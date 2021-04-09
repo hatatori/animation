@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-all *{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+.font-2{font-family: 'Josefin Sans', sans-serif;}
+
+
+.container{
+    width: 1000px;
+    margin:50px auto;
+    max-width: 90%;
+}
+
+.centrao{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r{background-color: #c0392b;}
+.g{background-color: #27ae60;}
+.b{background-color: #2980b9;}
+.p{background-color: #8e44ad;}
+.b{background-color: #000000;}
+.g{background-color: #dddddd;}
+
+
+/* parte2  */
+.bv{background-color: #DAF7A6;}
+.ba{background-color: #FFC300; }
+.bl{background-color: #FF5733; }
+.bv{background-color: #C70039; }
+.br{background-color: #581845; }
+
+:root{
+    --c1:#DAF7A6;
+    --c2:#FFC300; 
+    --c3:#FF5733; 
+    --c4:#C70039; 
+    --c5:#581845; 
+}
+
+.b1{background-color: var(--c1);}
+.b2{background-color: var(--c2);}
+.b3{background-color: var(--c3);}
+.b4{background-color: var(--c4);}
+.b5{background-color: var(--c5);}
+
+.t1{color: var(--c1);}
+.t2{color: var(--c2);}
+.t3{color: var(--c3);}
+.t4{color: var(--c4);}
+.t5{color: var(--c5);}
+
+.ladoalado{display: flex;}
+.ladoalado-h{display: flex;flex-direction: column;}
+
+/* botao */
+.btn{
+    padding:10px;
+    border:none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.btn-dark{
+    background-color: black;
+    color: white;
+}
+
+.btn-dark:hover{
+    background-color: #ddd;
+    color: black;
+}
