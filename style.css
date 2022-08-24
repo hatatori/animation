@@ -1,0 +1,112 @@
+:root{
+    /* transform */
+    --t1: 60px;
+    --t2: -60px;
+
+    /* rotate */
+    --deg1: 45deg;
+    --deg2: -45deg;
+
+    /* scale */
+    --s1: 2;
+    --s2: -2;
+
+    /* skew */
+    --sk1: 45deg;
+    --sk2: 30deg;
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Segoe UI;
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: #dddddd88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.square2{
+    width: 80px;
+    height: 80px;
+    background-color: #e74c3c; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    box-shadow: 0px 0px 5px #00000099;
+    border-radius: 0.5em;
+}
+
+.square *{transition: 1s;}
+
+/* transform */
+
+.square:hover .translate{transform: translate(var(--t1), var(--t1));}
+.square:hover .translateX{transform: translateX(var(--t1));}
+.square:hover .translateY{transform: translateY(var(--t1));}
+.square:hover .translateZ{transform: translateZ(var(--t1));}
+
+.square:active .translate{transform: translate(var(--t2), var(--t2));}
+.square:active .translateX{transform: translateX(var(--t2));}
+.square:active .translateY{transform: translateY(var(--t2));}
+.square:active .translateZ{transform: translateZ(var(--t2));}
+
+
+/* rotate */
+.square:hover .rotate{transform: rotate(var(--deg1));}
+.square:hover .rotateX{transform: rotateX(var(--deg1));}
+.square:hover .rotateY{transform: rotateY(var(--deg1));}
+
+.square:active .rotate{transform: rotate(var(--deg2));}
+.square:active .rotateX{transform: rotateX(var(--deg2));}
+.square:active .rotateY{transform: rotateY(var(--deg2));}
+
+/* várias propriedades no transform */
+.square:hover .rotateXYZ{transform: rotate(var(--deg1)) rotateX(var(--deg1)) rotateY(var(--deg1)) translateY(100px) scale(1.5);}
+.square:active .rotateXYZ{transform: rotate(var(--deg2)) rotateX(var(--deg2)) rotateY(var(--deg2));}
+
+/* scale */
+.square:hover .scale{transform: scale(var(--s1))}
+.square:hover .scaleX{transform: scaleX(var(--s1))}
+.square:hover .scaleY{transform: scaleY(var(--s1))}
+
+.square:active .scale{transform: scale(var(--s2))}
+.square:active .scaleX{transform: scaleX(var(--s2));}
+.square:active .scaleY{transform: scaleY(var(--s2))}
+
+/* skew */
+.square:hover .skew{transform: skew(var(--sk1))}
+.square:hover .skewX{transform: skewX(var(--sk1))}
+.square:hover .skewY{transform: skewY(var(--sk1))}
+.square:hover .skewO{transform: skew(var(--sk1),var(--sk2))}
+
+.square:active .skew{transform: skew(var(--sk2))}
+.square:active .skewX{transform: skewX(var(--sk2));}
+.square:active .skewY{transform: skewY(var(--sk2))}
+.square:active .skewO{transform: skew(var(--sk1),var(--sk2))}
+
+/* parte 2 */
+
+/* tempo de animação */
+.rotate-ani{animation: rotacao 3s infinite linear;}
+
+/* animação */
+@keyframes rotacao{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
